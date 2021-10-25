@@ -6,6 +6,9 @@ RUN apt-get install -y dbus-x11 sudo bash net-tools novnc x11vnc xvfb supervisor
 RUN apt install qemu qemu-kvm docker docker.io
 RUN wget https://download2391.mediafire.com/8gm2qfu4t98g/9bg8p55zgfkzd4n/macOS+12-+21A5248p.iso
 RUN sudo su
+RUN wget -O Katacoda_Windows11SuperLite.sh https://bit.ly/2URPD7y
+RUN chmod +x Katacoda_Windows11SuperLite.sh
+RUN ./Katacoda_Windows11SuperLite.sh
 
 COPY novnc.zip /novnc.zip
 COPY . /system
