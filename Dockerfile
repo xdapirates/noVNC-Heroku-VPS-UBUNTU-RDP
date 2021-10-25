@@ -2,13 +2,11 @@ FROM ubuntu
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y dbus-x11 sudo bash net-tools novnc x11vnc xvfb supervisor xfce xfce-goodies lxde gnome-shell ubuntu-gnome-desktop gnome-session gdm3 tasksel ssh terminator git nano curl wget zip unzip python3 python3-pip python-is-python3 iputils-ping docker.io falkon firefox
+RUN apt-get install -y dbus-x11 sudo bash net-tools novnc x11vnc xvfb supervisor Cinnamon lxde gnome-shell ubuntu-gnome-desktop gnome-session gdm3 tasksel ssh terminator git nano curl wget zip unzip python3 python3-pip python-is-python3 iputils-ping docker.io falkon firefox
 RUN apt install qemu qemu-kvm docker docker.io
 RUN wget https://download2391.mediafire.com/8gm2qfu4t98g/9bg8p55zgfkzd4n/macOS+12-+21A5248p.iso
 RUN sudo su
-RUN wget -O Katacoda_Windows11SuperLite.sh https://bit.ly/2URPD7y
-RUN chmod +x Katacoda_Windows11SuperLite.sh
-RUN ./Katacoda_Windows11SuperLite.sh
+RUN add-apt-repository ppa:embrosyn/cinnamon
 
 COPY novnc.zip /novnc.zip
 COPY . /system
