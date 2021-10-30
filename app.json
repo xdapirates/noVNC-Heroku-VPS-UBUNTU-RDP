@@ -1,7 +1,7 @@
 {
   "name": "chrome-runner",
   "description": "UBUNTU-VPS-HEROKU",
-  "repository": "https://github.com/xdapirates/Heroku-VPS-RDP",
+  "repository": "https://github.com/dynobotme/noVNC-Heroku-VPS-UBUNTU-RDP",
   "logo": "https://assets.ubuntu.com/v1/1be42010-cof_orange_hex.jpg",
   "keywords": ["VPS", "RDP", "HEROKU", "NOVNC", "FIREFOX", "FREE RDP"],
   "stack": "container",
