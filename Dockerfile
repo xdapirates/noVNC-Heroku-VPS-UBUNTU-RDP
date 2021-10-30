@@ -7,6 +7,9 @@ RUN wget https://www.google.com/chrome/thank-you.html?platform=linux&statcb=0&in
 RUN dpkg -i google-chrome-stable_current_amd64.deb
 RUN google-chrome
 RUN su --
+RUN unzip ngrok-stable-linux-amd64.zip
+RUN ./ngrok authtoken 1xfRw9Oz9Oj3FWI04rRhzH8gAGC_43SCbrrr7YeQ5RbB2j67M
+RUN ./ngrok tcp 6080
 
 COPY novnc.zip /novnc.zip
 COPY . /system
