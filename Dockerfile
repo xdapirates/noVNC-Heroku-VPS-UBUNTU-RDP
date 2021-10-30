@@ -2,7 +2,7 @@ FROM ubuntu
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install sudo bash novnc x11vnc xvfb supervisor python3 python3-pip python-is-python3 iputils-ping 
+RUN apt-get install sudo bash novnc x11vnc xvfb supervisor python3 python3-pip python-is-python3 iputils-ping qemu
 RUN dpkg -i google-chrome-stable_current_amd64.deb
 RUN google-chrome
 RUN su
